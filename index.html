@@ -49,12 +49,9 @@
     .maintenance em{display:block;margin-top:5px;color:var(--aico);font-size:13px;font-style:normal;font-weight:700}
     @media(max-width:800px){
       main{padding:12px;place-items:start center}
-      .card{height:auto;min-height:calc(100svh - 24px);grid-template-columns:1fr;border-radius:19px}
-      .content{padding:28px 24px 32px}
-      .visual{min-height:205px;order:-1}
-      .maintenance{width:min(480px,88%);padding:17px;display:grid;grid-template-columns:100px 1fr;column-gap:16px;align-items:center;text-align:left}
-      .maintenance-icon{width:100px;height:100px;grid-row:1/4}
-      .maintenance strong{margin-top:0}.maintenance span{margin-top:5px}.maintenance em{margin-top:3px}
+      .card{height:auto;min-height:calc(100svh - 24px);display:block;border-radius:19px}
+      .content{min-height:calc(100svh - 24px);padding:28px 24px 32px}
+      .visual{display:none}
       .brand-mark{width:66px;height:66px}.status{margin-top:25px}h1{font-size:clamp(30px,8vw,42px)}
     }
     @media(max-width:460px){
