@@ -2,61 +2,242 @@
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#f7faf9">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#f3f9f8">
   <meta name="robots" content="noindex,nofollow">
-  <title>AICO — Estamos preparando la plataforma</title>
+  <meta name="description" content="AICO se encuentra temporalmente en mantenimiento.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <title>AICO | Mantenimiento</title>
   <style>
-    :root{--ink:#17342f;--muted:#647a75;--line:#dce7e3;--mint:#56b99f;--mint-soft:#e9f7f2;--bg:#f5f8f7}
+    :root{
+      --aico:#2d8791;
+      --aico-dark:#183b42;
+      --ink:#172e35;
+      --muted:#687b80;
+      --line:#d9e7e7;
+      --soft:#eef7f6;
+      --white:#fff;
+      --warning:#f3b33d;
+    }
     *{box-sizing:border-box}
-    body{margin:0;min-height:100vh;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:radial-gradient(circle at 10% 15%,#e7f6f1 0,transparent 28rem),radial-gradient(circle at 92% 90%,#edf3ff 0,transparent 32rem),var(--bg)}
-    main{min-height:100vh;display:grid;place-items:center;padding:32px 20px}
-    .shell{width:min(1080px,100%);display:grid;grid-template-columns:1.1fr .9fr;overflow:hidden;border:1px solid rgba(220,231,227,.9);border-radius:28px;background:rgba(255,255,255,.86);box-shadow:0 28px 80px rgba(23,52,47,.10);backdrop-filter:blur(12px)}
-    .content{padding:clamp(36px,6vw,76px)}
-    .brand{display:flex;align-items:center;gap:13px;font-weight:800;letter-spacing:.16em;font-size:19px}
-    .mark{width:42px;height:42px;display:grid;place-items:center;border-radius:14px;background:var(--ink);color:#fff;box-shadow:0 9px 22px rgba(23,52,47,.2)}
-    .mark svg{width:24px;height:24px}
-    .eyebrow{margin-top:64px;display:inline-flex;align-items:center;gap:9px;padding:8px 12px;border:1px solid #cce7de;border-radius:999px;background:var(--mint-soft);color:#28745f;font-size:13px;font-weight:700}
-    .dot{width:8px;height:8px;border-radius:50%;background:var(--mint);box-shadow:0 0 0 5px rgba(86,185,159,.14)}
-    h1{margin:22px 0 18px;max-width:680px;font-size:clamp(40px,6vw,70px);line-height:1.02;letter-spacing:-.055em}
-    .lead{max-width:620px;margin:0;color:var(--muted);font-size:clamp(17px,2vw,20px);line-height:1.65}
-    .notice{margin-top:34px;padding:17px 18px;display:flex;gap:13px;align-items:flex-start;border-left:3px solid var(--mint);border-radius:0 14px 14px 0;background:#f6fbf9;color:#516b65;font-size:14px;line-height:1.5}
-    .notice svg{flex:0 0 auto;margin-top:2px;color:#33856e}
-    footer{margin-top:54px;color:#84958f;font-size:12px}
-    .visual{position:relative;min-height:620px;overflow:hidden;background:linear-gradient(145deg,#17342f 0%,#245c50 58%,#4aa58d 100%)}
-    .orb{position:absolute;border-radius:50%;filter:blur(1px)}
-    .orb.one{width:330px;height:330px;right:-100px;top:-80px;background:rgba(255,255,255,.10)}
-    .orb.two{width:250px;height:250px;left:-100px;bottom:-70px;background:rgba(149,225,205,.19)}
-    .panel{position:absolute;inset:11%;display:flex;flex-direction:column;justify-content:space-between;padding:28px;border:1px solid rgba(255,255,255,.18);border-radius:24px;background:rgba(255,255,255,.10);box-shadow:0 24px 60px rgba(0,0,0,.16);backdrop-filter:blur(18px);color:#fff}
-    .panel-top{display:flex;justify-content:space-between;align-items:center;font-size:13px;color:rgba(255,255,255,.72)}
-    .pulse{width:10px;height:10px;border-radius:50%;background:#9ce5d1;box-shadow:0 0 0 8px rgba(156,229,209,.13)}
-    .tooth{align-self:center;width:min(245px,68%);opacity:.92}
-    .panel-copy strong{display:block;font-size:22px;letter-spacing:-.02em}
-    .panel-copy span{display:block;margin-top:8px;color:rgba(255,255,255,.7);font-size:14px;line-height:1.5}
-    @media(max-width:820px){main{padding:14px}.shell{grid-template-columns:1fr;border-radius:22px}.content{padding:36px 28px 42px}.visual{min-height:330px;order:-1}.panel{inset:8%;padding:21px}.tooth{width:150px}.eyebrow{margin-top:42px}footer{margin-top:38px}}
-    @media(prefers-reduced-motion:no-preference){.pulse{animation:pulse 2.4s ease-out infinite}@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(156,229,209,.35)}70%{box-shadow:0 0 0 14px rgba(156,229,209,0)}100%{box-shadow:0 0 0 0 rgba(156,229,209,0)}}}
+    html{color-scheme:light}
+    body{
+      margin:0;
+      min-height:100vh;
+      min-height:100svh;
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+      color:var(--ink);
+      background:
+        radial-gradient(circle at 10% 10%,rgba(45,135,145,.08),transparent 30rem),
+        radial-gradient(circle at 92% 90%,rgba(45,135,145,.06),transparent 34rem),
+        #f7fbfa;
+    }
+    main{
+      min-height:100vh;
+      min-height:100svh;
+      display:grid;
+      place-items:center;
+      padding:clamp(18px,4vw,48px);
+    }
+    .card{
+      width:min(1040px,100%);
+      display:grid;
+      grid-template-columns:minmax(0,1.08fr) minmax(310px,.92fr);
+      overflow:hidden;
+      border:1px solid rgba(217,231,231,.95);
+      border-radius:26px;
+      background:rgba(255,255,255,.94);
+      box-shadow:0 28px 75px rgba(24,59,66,.11);
+    }
+    .content{padding:clamp(34px,6vw,72px)}
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:17px;
+      color:var(--ink);
+    }
+    .brand-mark{width:92px;height:74px;flex:0 0 auto}
+    .brand-name{
+      display:block;
+      font-size:clamp(27px,3vw,34px);
+      line-height:1;
+      letter-spacing:.015em;
+      font-weight:500;
+    }
+    .brand-tagline{
+      display:block;
+      max-width:300px;
+      margin-top:8px;
+      color:var(--muted);
+      font-size:15px;
+      line-height:1.35;
+    }
+    .status{
+      display:inline-flex;
+      align-items:center;
+      gap:9px;
+      margin-top:clamp(38px,6vw,64px);
+      padding:8px 12px;
+      border:1px solid #cfe3e3;
+      border-radius:999px;
+      background:var(--soft);
+      color:#276d75;
+      font-size:13px;
+      font-weight:700;
+    }
+    .status-dot{
+      width:8px;height:8px;border-radius:50%;
+      background:var(--warning);
+      box-shadow:0 0 0 5px rgba(243,179,61,.16);
+    }
+    h1{
+      max-width:650px;
+      margin:20px 0 17px;
+      font-size:clamp(35px,5vw,57px);
+      line-height:1.04;
+      letter-spacing:-.045em;
+    }
+    .lead{
+      max-width:650px;
+      margin:0;
+      color:var(--muted);
+      font-size:clamp(16px,1.9vw,19px);
+      line-height:1.65;
+    }
+    .return{
+      margin:24px 0 0;
+      color:var(--aico-dark);
+      font-size:16px;
+      font-weight:700;
+      line-height:1.5;
+    }
+    .support{
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+      gap:8px 13px;
+      margin-top:32px;
+      padding-top:26px;
+      border-top:1px solid var(--line);
+      color:var(--muted);
+      font-size:14px;
+    }
+    .support a{
+      color:var(--aico);
+      font-weight:700;
+      text-decoration:none;
+      overflow-wrap:anywhere;
+    }
+    .support a:hover,.support a:focus-visible{text-decoration:underline}
+    .note{
+      margin-top:16px;
+      color:#819095;
+      font-size:12px;
+      line-height:1.5;
+    }
+    .visual{
+      position:relative;
+      min-height:620px;
+      display:grid;
+      place-items:center;
+      overflow:hidden;
+      background:linear-gradient(145deg,#e9f5f4,#d6eceb);
+    }
+    .visual:before,.visual:after{
+      content:"";
+      position:absolute;
+      border-radius:50%;
+      background:rgba(45,135,145,.08);
+    }
+    .visual:before{width:340px;height:340px;right:-125px;top:-100px}
+    .visual:after{width:250px;height:250px;left:-95px;bottom:-85px}
+    .maintenance{
+      position:relative;
+      z-index:1;
+      width:min(330px,78%);
+      padding:34px 28px 30px;
+      text-align:center;
+      border:1px solid rgba(255,255,255,.8);
+      border-radius:24px;
+      background:rgba(255,255,255,.68);
+      box-shadow:0 24px 55px rgba(24,59,66,.10);
+      backdrop-filter:blur(10px);
+    }
+    .maintenance-icon{width:min(190px,72%);height:auto}
+    .maintenance strong{
+      display:block;
+      margin-top:24px;
+      color:var(--aico-dark);
+      font-size:21px;
+      letter-spacing:-.02em;
+    }
+    .maintenance span{
+      display:block;
+      margin-top:8px;
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.55;
+    }
+    @media(max-width:800px){
+      main{padding:14px}
+      .card{grid-template-columns:1fr;border-radius:20px}
+      .content{padding:34px 25px 38px}
+      .visual{min-height:300px;order:-1}
+      .maintenance{width:min(420px,86%);padding:22px}
+      .maintenance-icon{width:125px}
+      .maintenance strong{margin-top:13px}
+      .brand-mark{width:76px;height:62px}
+      .status{margin-top:38px}
+    }
+    @media(max-width:440px){
+      .brand{gap:11px}
+      .brand-tagline{font-size:13px}
+      .visual{min-height:260px}
+      .maintenance span{display:none}
+      .support{align-items:flex-start;flex-direction:column}
+    }
   </style>
 </head>
 <body>
 <main>
-  <section class="shell" aria-labelledby="title">
+  <section class="card" aria-labelledby="title">
     <div class="content">
-      <div class="brand"><span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7.6 3.5c1.8 0 2.7 1 4.4 1s2.6-1 4.4-1c2.7 0 4.6 2.3 4.2 5.2-.6 4.6-2.8 11.8-5.1 11.8-1.4 0-1.6-4.4-3.5-4.4s-2.1 4.4-3.5 4.4c-2.3 0-4.5-7.2-5.1-11.8-.4-2.9 1.5-5.2 4.2-5.2Z"/></svg></span>AICO</div>
-      <div class="eyebrow"><span class="dot"></span>Implementación en curso</div>
-      <h1 id="title">Estamos preparando una nueva experiencia.</h1>
-      <p class="lead">AICO será la plataforma inteligente que acompaña al profesional odontológico en la gestión clínica, la atención y el seguimiento de cada paciente.</p>
-      <div class="notice">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg>
-        <span>La plataforma todavía no está habilitada para ingresar información clínica. Estamos terminando las validaciones de seguridad y disponibilidad.</span>
+      <div class="brand" aria-label="AICO, Asistente Inteligente para Consultorios Odontológicos">
+        <svg class="brand-mark" viewBox="0 0 120 90" aria-hidden="true">
+          <circle cx="59" cy="41" r="31" fill="#2d8791"/>
+          <path d="M10 45h34l7-20 9 50 13-61 12 31h25" fill="none" stroke="#fff" stroke-width="4.2" stroke-linejoin="round"/>
+          <path d="M44 57c2 15 5 24 11 24 7 0 7-19 11-19s4 19 11 19c6 0 9-9 11-24" fill="#2d8791"/>
+        </svg>
+        <div>
+          <span class="brand-name">AICO</span>
+          <span class="brand-tagline">Asistente Inteligente para Consultorios Odontológicos</span>
+        </div>
       </div>
-      <footer>© 2026 AICO · Tecnología pensada para el cuidado.</footer>
+
+      <div class="status"><span class="status-dot"></span>Mantenimiento programado</div>
+      <h1 id="title">Estamos realizando tareas de mantenimiento</h1>
+      <p class="lead">AICO es el asistente inteligente para la gestión de consultorios odontológicos. Facilita la organización cotidiana del consultorio y permite administrar pacientes, agenda, historias clínicas y tratamientos desde un entorno centralizado, claro y seguro.</p>
+      <p class="return">Estamos trabajando para restablecer el servicio. Volveremos a estar disponibles pronto.</p>
+
+      <div class="support">
+        <span>¿Necesitás ayuda?</span>
+        <a href="mailto:soporte@aicodental.io">soporte@aicodental.io</a>
+      </div>
+      <div class="note">La plataforma no se encuentra disponible temporalmente. No es necesario realizar ninguna acción.</div>
     </div>
+
     <div class="visual" aria-hidden="true">
-      <div class="orb one"></div><div class="orb two"></div>
-      <div class="panel">
-        <div class="panel-top"><span>Estado de la plataforma</span><span class="pulse"></span></div>
-        <svg class="tooth" viewBox="0 0 220 250" fill="none"><path d="M70 20c17 0 26 10 40 10s23-10 40-10c31 0 53 27 48 60-7 53-32 148-60 148-18 0-19-65-28-65s-10 65-28 65c-28 0-53-95-60-148-5-33 17-60 48-60Z" stroke="white" stroke-width="5"/><path d="M64 72c20 14 72 14 92 0" stroke="rgba(255,255,255,.45)" stroke-width="4" stroke-linecap="round"/></svg>
-        <div class="panel-copy"><strong>Acceso próximamente</strong><span>Estamos preparando un entorno confiable, simple y seguro para los primeros consultorios.</span></div>
+      <div class="maintenance">
+        <svg class="maintenance-icon" viewBox="0 0 220 220">
+          <circle cx="110" cy="117" r="75" fill="#2d8791"/>
+          <path d="M39 119h45l9-29 14 69 18-83 16 43h42" fill="none" stroke="#fff" stroke-width="7" stroke-linejoin="round"/>
+          <path d="M85 70c4-26 19-41 45-41s42 15 46 41H85Z" fill="#f3b33d"/>
+          <path d="M78 70h105" stroke="#cf8721" stroke-width="8" stroke-linecap="round"/>
+          <path d="M130 30v26" stroke="#cf8721" stroke-width="7"/>
+          <path d="M88 145c3 27 8 46 20 46 13 0 13-34 22-34s9 34 22 34c12 0 17-19 20-46" fill="#2d8791"/>
+        </svg>
+        <strong>AICO está en mantenimiento</strong>
+        <span>Nuestro equipo está trabajando para restablecer el acceso de forma segura.</span>
       </div>
     </div>
   </section>
