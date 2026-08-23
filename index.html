@@ -7,194 +7,66 @@
   <meta name="robots" content="noindex,nofollow">
   <meta name="description" content="AICO se encuentra temporalmente en mantenimiento.">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <title>AICO | Mantenimiento</title>
+  <title>AICO | Mantenimiento programado</title>
   <style>
-    :root{
-      --aico:#2d8791;
-      --aico-dark:#183b42;
-      --ink:#172e35;
-      --muted:#687b80;
-      --line:#d9e7e7;
-      --soft:#eef7f6;
-      --white:#fff;
-      --warning:#f3b33d;
-    }
+    :root{--aico:#2d8791;--dark:#183b42;--ink:#172e35;--muted:#687b80;--line:#d9e7e7;--soft:#eef7f6;--warning:#f3b33d}
     *{box-sizing:border-box}
     html{color-scheme:light}
     body{
-      margin:0;
-      min-height:100vh;
-      min-height:100svh;
+      margin:0;min-height:100vh;min-height:100svh;
       font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
       color:var(--ink);
-      background:
-        radial-gradient(circle at 10% 10%,rgba(45,135,145,.08),transparent 30rem),
-        radial-gradient(circle at 92% 90%,rgba(45,135,145,.06),transparent 34rem),
-        #f7fbfa;
+      background:radial-gradient(circle at 10% 10%,rgba(45,135,145,.08),transparent 28rem),radial-gradient(circle at 92% 90%,rgba(45,135,145,.06),transparent 30rem),#f7fbfa
     }
-    main{
-      min-height:100vh;
-      min-height:100svh;
-      display:grid;
-      place-items:center;
-      padding:clamp(18px,4vw,48px);
-    }
+    main{min-height:100vh;min-height:100svh;display:grid;place-items:center;padding:20px}
     .card{
-      width:min(1040px,100%);
-      display:grid;
-      grid-template-columns:minmax(0,1.08fr) minmax(310px,.92fr);
-      overflow:hidden;
-      border:1px solid rgba(217,231,231,.95);
-      border-radius:26px;
-      background:rgba(255,255,255,.94);
-      box-shadow:0 28px 75px rgba(24,59,66,.11);
+      width:min(980px,100%);height:min(610px,calc(100svh - 40px));min-height:520px;
+      display:grid;grid-template-columns:minmax(0,1.16fr) minmax(300px,.84fr);
+      overflow:hidden;border:1px solid rgba(217,231,231,.95);border-radius:24px;
+      background:rgba(255,255,255,.95);box-shadow:0 25px 68px rgba(24,59,66,.11)
     }
-    .content{padding:clamp(34px,6vw,72px)}
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:17px;
-      color:var(--ink);
-    }
-    .brand-mark{width:92px;height:74px;flex:0 0 auto}
-    .brand-name{
-      display:block;
-      font-size:clamp(27px,3vw,34px);
-      line-height:1;
-      letter-spacing:.015em;
-      font-weight:500;
-    }
-    .brand-tagline{
-      display:block;
-      max-width:300px;
-      margin-top:8px;
-      color:var(--muted);
-      font-size:15px;
-      line-height:1.35;
-    }
-    .status{
-      display:inline-flex;
-      align-items:center;
-      gap:9px;
-      margin-top:clamp(38px,6vw,64px);
-      padding:8px 12px;
-      border:1px solid #cfe3e3;
-      border-radius:999px;
-      background:var(--soft);
-      color:#276d75;
-      font-size:13px;
-      font-weight:700;
-    }
-    .status-dot{
-      width:8px;height:8px;border-radius:50%;
-      background:var(--warning);
-      box-shadow:0 0 0 5px rgba(243,179,61,.16);
-    }
-    h1{
-      max-width:650px;
-      margin:20px 0 17px;
-      font-size:clamp(35px,5vw,57px);
-      line-height:1.04;
-      letter-spacing:-.045em;
-    }
-    .lead{
-      max-width:650px;
-      margin:0;
-      color:var(--muted);
-      font-size:clamp(16px,1.9vw,19px);
-      line-height:1.65;
-    }
-    .return{
-      margin:24px 0 0;
-      color:var(--aico-dark);
-      font-size:16px;
-      font-weight:700;
-      line-height:1.5;
-    }
-    .support{
-      display:flex;
-      flex-wrap:wrap;
-      align-items:center;
-      gap:8px 13px;
-      margin-top:32px;
-      padding-top:26px;
-      border-top:1px solid var(--line);
-      color:var(--muted);
-      font-size:14px;
-    }
-    .support a{
-      color:var(--aico);
-      font-weight:700;
-      text-decoration:none;
-      overflow-wrap:anywhere;
-    }
+    .content{display:flex;flex-direction:column;justify-content:center;padding:clamp(28px,4.5vw,54px)}
+    .brand{display:flex;align-items:center;gap:14px;color:var(--ink)}
+    .brand-mark{width:78px;height:78px;flex:0 0 auto;color:var(--aico)}
+    .brand-name{display:block;font-size:30px;line-height:1;font-weight:500;letter-spacing:.015em}
+    .brand-tagline{display:block;max-width:300px;margin-top:7px;color:var(--muted);font-size:14px;line-height:1.35}
+    .status{display:inline-flex;align-self:flex-start;align-items:center;gap:9px;margin-top:34px;padding:7px 11px;border:1px solid #cfe3e3;border-radius:999px;background:var(--soft);color:#276d75;font-size:12px;font-weight:700}
+    .status-dot{width:8px;height:8px;border-radius:50%;background:var(--warning);box-shadow:0 0 0 4px rgba(243,179,61,.16)}
+    h1{max-width:600px;margin:16px 0 13px;font-size:clamp(32px,4.1vw,48px);line-height:1.04;letter-spacing:-.043em}
+    .lead{max-width:610px;margin:0;color:var(--muted);font-size:16px;line-height:1.55}
+    .return{margin:18px 0 0;color:var(--dark);font-size:15px;font-weight:700;line-height:1.45}
+    .support{display:flex;flex-wrap:wrap;align-items:center;gap:7px 12px;margin-top:22px;padding-top:19px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+    .support a{color:var(--aico);font-weight:700;text-decoration:none;overflow-wrap:anywhere}
     .support a:hover,.support a:focus-visible{text-decoration:underline}
-    .note{
-      margin-top:16px;
-      color:#819095;
-      font-size:12px;
-      line-height:1.5;
-    }
-    .visual{
-      position:relative;
-      min-height:620px;
-      display:grid;
-      place-items:center;
-      overflow:hidden;
-      background:linear-gradient(145deg,#e9f5f4,#d6eceb);
-    }
-    .visual:before,.visual:after{
-      content:"";
-      position:absolute;
-      border-radius:50%;
-      background:rgba(45,135,145,.08);
-    }
-    .visual:before{width:340px;height:340px;right:-125px;top:-100px}
-    .visual:after{width:250px;height:250px;left:-95px;bottom:-85px}
-    .maintenance{
-      position:relative;
-      z-index:1;
-      width:min(330px,78%);
-      padding:34px 28px 30px;
-      text-align:center;
-      border:1px solid rgba(255,255,255,.8);
-      border-radius:24px;
-      background:rgba(255,255,255,.68);
-      box-shadow:0 24px 55px rgba(24,59,66,.10);
-      backdrop-filter:blur(10px);
-    }
-    .maintenance-icon{width:min(190px,72%);height:auto}
-    .maintenance strong{
-      display:block;
-      margin-top:24px;
-      color:var(--aico-dark);
-      font-size:21px;
-      letter-spacing:-.02em;
-    }
-    .maintenance span{
-      display:block;
-      margin-top:8px;
-      color:var(--muted);
-      font-size:14px;
-      line-height:1.55;
-    }
+    .note{margin-top:11px;color:#819095;font-size:11px;line-height:1.45}
+    .visual{position:relative;display:grid;place-items:center;overflow:hidden;background:linear-gradient(145deg,#e9f5f4,#d6eceb)}
+    .visual:before,.visual:after{content:"";position:absolute;border-radius:50%;background:rgba(45,135,145,.08)}
+    .visual:before{width:300px;height:300px;right:-125px;top:-110px}.visual:after{width:220px;height:220px;left:-100px;bottom:-85px}
+    .maintenance{position:relative;z-index:1;width:min(290px,78%);padding:28px 23px;text-align:center;border:1px solid rgba(255,255,255,.82);border-radius:22px;background:rgba(255,255,255,.7);box-shadow:0 22px 48px rgba(24,59,66,.1);backdrop-filter:blur(10px)}
+    .maintenance-icon{width:145px;height:145px;color:var(--aico)}
+    .maintenance strong{display:block;margin-top:17px;color:var(--dark);font-size:20px;letter-spacing:-.02em}
+    .maintenance span{display:block;margin-top:8px;color:var(--muted);font-size:14px;line-height:1.48}
+    .maintenance em{display:block;margin-top:5px;color:var(--aico);font-size:13px;font-style:normal;font-weight:700}
     @media(max-width:800px){
-      main{padding:14px}
-      .card{grid-template-columns:1fr;border-radius:20px}
-      .content{padding:34px 25px 38px}
-      .visual{min-height:300px;order:-1}
-      .maintenance{width:min(420px,86%);padding:22px}
-      .maintenance-icon{width:125px}
-      .maintenance strong{margin-top:13px}
-      .brand-mark{width:76px;height:62px}
-      .status{margin-top:38px}
+      main{padding:12px;place-items:start center}
+      .card{height:auto;min-height:calc(100svh - 24px);grid-template-columns:1fr;border-radius:19px}
+      .content{padding:28px 24px 32px}
+      .visual{min-height:205px;order:-1}
+      .maintenance{width:min(480px,88%);padding:17px;display:grid;grid-template-columns:100px 1fr;column-gap:16px;align-items:center;text-align:left}
+      .maintenance-icon{width:100px;height:100px;grid-row:1/4}
+      .maintenance strong{margin-top:0}.maintenance span{margin-top:5px}.maintenance em{margin-top:3px}
+      .brand-mark{width:66px;height:66px}.status{margin-top:25px}h1{font-size:clamp(30px,8vw,42px)}
     }
-    @media(max-width:440px){
-      .brand{gap:11px}
-      .brand-tagline{font-size:13px}
-      .visual{min-height:260px}
-      .maintenance span{display:none}
+    @media(max-width:460px){
+      .visual{min-height:180px}.maintenance{grid-template-columns:76px 1fr;padding:14px}.maintenance-icon{width:76px;height:76px}
+      .maintenance strong{font-size:17px}.maintenance span{font-size:12px}.maintenance em{font-size:12px}
+      .brand{gap:10px}.brand-name{font-size:26px}.brand-tagline{font-size:12px}.lead{font-size:15px}
       .support{align-items:flex-start;flex-direction:column}
+    }
+    @media(max-height:650px) and (min-width:801px){
+      main{padding:12px}.card{height:calc(100svh - 24px);min-height:0}.content{padding:26px 38px}
+      .brand-mark{width:62px;height:62px}.status{margin-top:20px}h1{font-size:36px;margin-top:12px}.lead{font-size:14px}
+      .return{margin-top:12px}.support{margin-top:15px;padding-top:14px}.maintenance{padding:21px}.maintenance-icon{width:120px;height:120px}
     }
   </style>
 </head>
@@ -203,41 +75,28 @@
   <section class="card" aria-labelledby="title">
     <div class="content">
       <div class="brand" aria-label="AICO, Asistente Inteligente para Consultorios Odontológicos">
-        <svg class="brand-mark" viewBox="0 0 120 90" aria-hidden="true">
-          <circle cx="59" cy="41" r="31" fill="#2d8791"/>
-          <path d="M10 45h34l7-20 9 50 13-61 12 31h25" fill="none" stroke="#fff" stroke-width="4.2" stroke-linejoin="round"/>
-          <path d="M44 57c2 15 5 24 11 24 7 0 7-19 11-19s4 19 11 19c6 0 9-9 11-24" fill="#2d8791"/>
+        <svg class="brand-mark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M12 1.8C8.7 1.8 6.1 3.6 5.3 6.5C4.8 8.3 5.1 10.1 5.8 11.8C6.4 13.3 6.8 14.9 7 16.6C7.2 18.3 7.5 20.6 8.8 21.4C9.6 21.9 10.2 21.1 10.5 19.6C10.7 18.4 11.1 17 12 17C12.9 17 13.3 18.4 13.5 19.6C13.8 21.1 14.4 21.9 15.2 21.4C16.5 20.6 16.8 18.3 17 16.6C17.2 14.9 17.6 13.3 18.2 11.8C18.9 10.1 19.2 8.3 18.7 6.5C17.9 3.6 15.3 1.8 12 1.8ZM1 11L7 11L9 6.1L11.5 16.6L13.5 7.1L16 11L23 11L23 13.2L16 13.2L13.5 9.3L11.5 18.8L9 8.3L7 13.2L1 13.2Z"/>
         </svg>
-        <div>
-          <span class="brand-name">AICO</span>
-          <span class="brand-tagline">Asistente Inteligente para Consultorios Odontológicos</span>
-        </div>
+        <div><span class="brand-name">AICO</span><span class="brand-tagline">Asistente Inteligente para Consultorios Odontológicos</span></div>
       </div>
 
       <div class="status"><span class="status-dot"></span>Mantenimiento programado</div>
       <h1 id="title">Estamos realizando tareas de mantenimiento</h1>
-      <p class="lead">AICO es el asistente inteligente para la gestión de consultorios odontológicos. Facilita la organización cotidiana del consultorio y permite administrar pacientes, agenda, historias clínicas y tratamientos desde un entorno centralizado, claro y seguro.</p>
-      <p class="return">Estamos trabajando para restablecer el servicio. Volveremos a estar disponibles pronto.</p>
-
-      <div class="support">
-        <span>¿Necesitás ayuda?</span>
-        <a href="mailto:soporte@aicodental.io">soporte@aicodental.io</a>
-      </div>
+      <p class="lead">AICO es el asistente inteligente para la gestión de consultorios odontológicos. Facilita la organización cotidiana y permite administrar pacientes, agenda, historias clínicas y tratamientos desde un entorno centralizado, claro y seguro.</p>
+      <p class="return">Gracias por esperar, en breve estaremos de vuelta.</p>
+      <div class="support"><span>¿Necesitás ayuda?</span><a href="mailto:soporte@aicodental.io">soporte@aicodental.io</a></div>
       <div class="note">La plataforma no se encuentra disponible temporalmente. No es necesario realizar ninguna acción.</div>
     </div>
 
     <div class="visual" aria-hidden="true">
       <div class="maintenance">
-        <svg class="maintenance-icon" viewBox="0 0 220 220">
-          <circle cx="110" cy="117" r="75" fill="#2d8791"/>
-          <path d="M39 119h45l9-29 14 69 18-83 16 43h42" fill="none" stroke="#fff" stroke-width="7" stroke-linejoin="round"/>
-          <path d="M85 70c4-26 19-41 45-41s42 15 46 41H85Z" fill="#f3b33d"/>
-          <path d="M78 70h105" stroke="#cf8721" stroke-width="8" stroke-linecap="round"/>
-          <path d="M130 30v26" stroke="#cf8721" stroke-width="7"/>
-          <path d="M88 145c3 27 8 46 20 46 13 0 13-34 22-34s9 34 22 34c12 0 17-19 20-46" fill="#2d8791"/>
+        <svg class="maintenance-icon" viewBox="0 0 24 24" fill="currentColor">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M12 1.8C8.7 1.8 6.1 3.6 5.3 6.5C4.8 8.3 5.1 10.1 5.8 11.8C6.4 13.3 6.8 14.9 7 16.6C7.2 18.3 7.5 20.6 8.8 21.4C9.6 21.9 10.2 21.1 10.5 19.6C10.7 18.4 11.1 17 12 17C12.9 17 13.3 18.4 13.5 19.6C13.8 21.1 14.4 21.9 15.2 21.4C16.5 20.6 16.8 18.3 17 16.6C17.2 14.9 17.6 13.3 18.2 11.8C18.9 10.1 19.2 8.3 18.7 6.5C17.9 3.6 15.3 1.8 12 1.8ZM1 11L7 11L9 6.1L11.5 16.6L13.5 7.1L16 11L23 11L23 13.2L16 13.2L13.5 9.3L11.5 18.8L9 8.3L7 13.2L1 13.2Z"/>
         </svg>
-        <strong>AICO está en mantenimiento</strong>
-        <span>Nuestro equipo está trabajando para restablecer el acceso de forma segura.</span>
+        <strong>Mantenimiento programado</strong>
+        <span>Nuestro equipo está implementando mejoras.</span>
+        <em>Gracias por esperar, en breve estaremos de vuelta.</em>
       </div>
     </div>
   </section>
