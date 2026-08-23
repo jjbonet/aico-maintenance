@@ -20,12 +20,12 @@
     }
     main{min-height:100vh;min-height:100svh;display:grid;place-items:center;padding:20px}
     .card{
-      width:min(760px,100%);height:auto;min-height:0;
+      position:relative;width:min(920px,100%);height:auto;min-height:0;
       display:block;
       overflow:hidden;border:1px solid rgba(217,231,231,.95);border-radius:24px;
       background:rgba(255,255,255,.95);box-shadow:0 25px 68px rgba(24,59,66,.11)
     }
-    .content{display:flex;min-height:min(610px,calc(100svh - 40px));flex-direction:column;justify-content:center;padding:clamp(32px,5.5vw,62px)}
+    .content{position:relative;z-index:1;display:flex;min-height:min(610px,calc(100svh - 40px));flex-direction:column;justify-content:center;padding:clamp(32px,5.5vw,62px);padding-right:clamp(310px,35vw,360px)}
     .brand{display:flex;align-items:center;gap:14px;color:var(--ink)}
     .brand-mark{width:78px;height:78px;flex:0 0 auto;color:var(--aico)}
     .brand-name{display:block;font-size:30px;line-height:1;font-weight:500;letter-spacing:.015em}
@@ -39,6 +39,7 @@
     .support a{color:var(--aico);font-weight:700;text-decoration:none;overflow-wrap:anywhere}
     .support a:hover,.support a:focus-visible{text-decoration:underline}
     .note{margin-top:11px;color:#819095;font-size:11px;line-height:1.45}
+    .worker{position:absolute;z-index:0;right:18px;bottom:-12px;width:min(330px,37%);height:auto;filter:drop-shadow(0 18px 24px rgba(24,59,66,.16));pointer-events:none;user-select:none}
     .visual{position:relative;display:grid;place-items:center;overflow:hidden;background:linear-gradient(145deg,#e9f5f4,#d6eceb)}
     .visual:before,.visual:after{content:"";position:absolute;border-radius:50%;background:rgba(45,135,145,.08)}
     .visual:before{width:300px;height:300px;right:-125px;top:-110px}.visual:after{width:220px;height:220px;left:-100px;bottom:-85px}
@@ -51,9 +52,11 @@
       main{padding:12px;place-items:start center}
       .card{height:auto;min-height:calc(100svh - 24px);display:block;border-radius:19px}
       .content{min-height:calc(100svh - 24px);padding:28px 24px 32px}
+      .worker{position:static;display:block;width:145px;margin:-5px auto -12px;filter:drop-shadow(0 12px 16px rgba(24,59,66,.14))}
       .brand-mark{width:66px;height:66px}.status{margin-top:25px}h1{font-size:clamp(30px,8vw,42px)}
     }
     @media(max-width:460px){
+      .worker{width:125px;margin:-3px auto -10px}
       .visual{min-height:180px}.maintenance{grid-template-columns:76px 1fr;padding:14px}.maintenance-icon{width:76px;height:76px}
       .maintenance strong{font-size:17px}.maintenance span{font-size:12px}.maintenance em{font-size:12px}
       .brand{gap:10px}.brand-name{font-size:26px}.brand-tagline{font-size:12px}.lead{font-size:15px}
@@ -76,6 +79,7 @@
         </svg>
         <div><span class="brand-name">AICO</span><span class="brand-tagline">Asistente Inteligente para Consultorios Odontológicos</span></div>
       </div>
+      <img class="worker" src="/aico-maintenance-worker.webp" width="527" height="560" alt="Personaje de AICO con casco y herramientas de mantenimiento">
 
       <div class="status"><span class="status-dot"></span>Mantenimiento programado</div>
       <h1 id="title">Estamos realizando tareas de mantenimiento</h1>
